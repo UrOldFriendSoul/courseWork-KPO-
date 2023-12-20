@@ -56,6 +56,11 @@ public class UsersData {
         users.clear();
         users.addAll(usr);
     }
+    public void deleteAll(){
+        users.clear(); // Очищаем список категорий в памяти
+        usersDB.deleteAll(); // Удаляем все записи в базе данных
+        readAll();
+    }
 
     public void addUser(String login, String password, String role) {
         User user = new User();

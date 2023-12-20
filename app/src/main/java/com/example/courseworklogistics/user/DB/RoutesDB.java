@@ -84,6 +84,11 @@ public class RoutesDB {
         db.delete("routes", "id = " + route.getId(), null);
         dbHelper.close();
     }
+    public void deleteAll() {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete("routes", null, null);
+        dbHelper.close();
+    }
 
     public List<Route> readAll(){
         SQLiteDatabase db = dbHelper.getWritableDatabase();

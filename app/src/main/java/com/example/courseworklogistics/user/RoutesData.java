@@ -63,6 +63,11 @@ public class RoutesData {
         routesDB.delete(route);
         readAll();
     }
+    public void deleteAll(){
+        routes.clear(); // Очищаем список категорий в памяти
+        routesDB.deleteAll(); // Удаляем все записи в базе данных
+        readAll();
+    }
     private void readAll(){
         List<Route> rt = routesDB.readAll();
         routes.clear();

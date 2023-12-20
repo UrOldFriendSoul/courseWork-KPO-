@@ -153,6 +153,11 @@ public class UserDB {
         dbHelper.close();
         return userList;
     }
+    public void deleteAll() {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete("users", null, null);
+        dbHelper.close();
+    }
     public List<User> getAllUsers(){
         List<User> userList = new ArrayList<>();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
