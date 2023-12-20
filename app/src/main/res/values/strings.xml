@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CourseWork Logistics</string>
+    <string-array name="strings">
+        <item>Сборка</item>
+        <item>Доставка</item>
+        <item>Доставлено</item>
+    </string-array>
+    <string-array name="users">
+        <item>admin</item>
+        <item>user</item>
+    </string-array>
+</resources>
